@@ -1,0 +1,83 @@
+@use "@/app/scss/variables" as *;
+
+#advice {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  font-family: $fontMR;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dr-bl;
+
+  .card {
+    width: calc(100vw / 3.2);
+    height: calc(100vh / 2.7);
+    background-color: $dr-gr-bl;
+    border-radius: 15px;
+
+    .main {
+      width: calc(100% - 30px - 30px);
+      height: calc(100% - 40px - 40px + 67px);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      margin: 40px 30px;
+
+      .counter {
+        color: $ne-gr;
+        text-align: center;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 5px;
+      }
+
+      .content {
+        color: $lt-cy;
+        font-weight: 800;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: fit-content;
+        height: 100px;
+        font-size: 22px;
+      }
+
+      .divider {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        object-fit: contain;
+
+        .desktop {
+          display: block;
+        }
+
+        .mobile {
+          display: none;
+        }
+      }
+
+      .button {
+        width: fit-content;
+        height: fit-content;
+        background-color: $ne-gr;
+        border: none;
+        padding: 15px;
+        border-radius: 30px;
+        display: flex;
+
+        cursor: pointer;
+
+        &:hover {
+          box-shadow: 0 0 30px $ne-gr;
+        }
+      }
+    }
+  }
+}
