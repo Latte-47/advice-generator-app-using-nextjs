@@ -29,8 +29,8 @@ export default function AdviceCard() {
   }, []);
 
   const handleClick = () => {
-    setCount(count + 1);
     getAdvice();
+    setCount(count + 1);
   };
 
   return (
@@ -53,13 +53,12 @@ export default function AdviceCard() {
               alt="dividerMobile"
             />
           </div>
-          <button className={`${styles.button}`} type="button">
-            <Image
-              className={`${styles.dice}`}
-              src={diceBtn}
-              alt="diceBtn"
-              onClick={handleClick}
-            />
+          <button
+            className={`${styles.button}`}
+            type="button"
+            onClick={handleClick}
+          >
+            <Image className={`${styles.dice}`} src={diceBtn} alt="diceBtn" />
           </button>
         </div>
       </div>

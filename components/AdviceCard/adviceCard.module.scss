@@ -53,9 +53,11 @@
         justify-content: center;
         align-items: center;
         object-fit: contain;
+        width: 95%;
 
         .desktop {
           display: block;
+          width: 100%;
         }
 
         .mobile {
@@ -76,6 +78,42 @@
 
         &:hover {
           box-shadow: 0 0 30px $ne-gr;
+        }
+      }
+    }
+  }
+}
+
+//*-----> mobiles
+@media screen and (max-width: 376px) {
+  #advice {
+    
+    .card {
+      width: 90vw;
+      height: calc(100vh / 2.5);
+
+      .main {
+        .counter {
+          font-size: 10px;
+        }
+
+        .content {
+          height: 120px;
+          font-size: 20px;
+          font-weight: 600;
+        }
+
+        .divider {
+          width: 100%;
+
+          .desktop {
+            display: none;
+          }
+
+          .mobile {
+            display: block;
+            width: 100%;
+          }
         }
       }
     }
