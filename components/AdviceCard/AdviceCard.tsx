@@ -20,8 +20,8 @@ export default function AdviceCard() {
     await fetch(url, { cache: "no-store" })
       .then((response) => response.json())
       .then((adviceData) => {
-        const Adviceobj = adviceData.slip.advice;
-        setAdvice(Adviceobj);
+        const adviceObj = adviceData.slip.advice;
+        setAdvice(adviceObj);
       })
       .catch((error) => {
         console.log(error);
